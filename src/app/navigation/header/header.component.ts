@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter Output} from '@angular/core';
+import { Component, OnInit, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,7 @@ import { Component, OnInit, EventEmitter Output} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() SideNavigationOpen
+  @Output() SideNavigationToggle = new EventEmitter();
 
   constructor() { }
 
@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onToggleOpenSidenav() {
-
+    this.SideNavigationToggle.emit();
   }
 
 }
