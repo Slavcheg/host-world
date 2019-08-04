@@ -1,0 +1,14 @@
+// nav-tabs.component-theme.scss
+@import '~@angular/material/theming';
+
+@mixin navtabs-component-theme($hostworld) {
+    $primary: map-get($hostworld, primary);
+    $accent: map-get($hostworld, accent);
+
+    // Put all theming styles here
+    .navtabs-container {
+        background-color: mat-color($hostworld-primary, 500);
+        
+    }
+    
+}
