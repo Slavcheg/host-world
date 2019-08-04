@@ -94,6 +94,39 @@ $hostworld-theme: mat-light-theme($hostworld-primary, $hostworld-accent, $hostwo
 // Navtabs component scss
 @include navtabs-component-theme($hostworld-theme);
 
+// Typography
+// Represents a collection of typography levels.
+// Defaults come from https://material.io/guidelines/style/typography.html
+// Note: The spec doesn't mention letter spacing. The values here come from
+// eyeballing it until it looked exactly like the spec examples.
+$hostworld-typography: mat-typography-config(
+  $font-family:   'Rubik, sans-serif',
+  $display-4:     mat-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $display-3:     mat-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+  $display-2:     mat-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+  $display-1:     mat-typography-level(34px, 40px, 400),
+  $headline:      mat-typography-level(97.54px, 0px, 400),
+  $title:         mat-typography-level(61px, 0px, 500),
+  $subheading-2:  mat-typography-level(48.77px, 0.25px, 400),
+  $subheading-1:  mat-typography-level(34.54px, 0.25px, 400),
+  $body-2:        mat-typography-level(14.22px, 0.25px, 500),
+  $body-1:        mat-typography-level(16.26px, 0.5px, 400),
+  $caption:       mat-typography-level(12.19px, 20px, 400),
+  $button:        mat-typography-level(14.22px, 1.25px, 500),
+  // Line-height must be unit-less fraction of the font-size.
+  $input:         mat-typography-level(inherit, 1.125, 400)
+);
+
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($hostworld-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($hostworld-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($hostworld-typography);
+
+@include mat-core($hostworld-typography);
 
 // All custom styling comes here...
 .mat-list-option:hover,
