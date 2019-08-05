@@ -1,7 +1,7 @@
 .hero-container {
     background: url(/assets/images/home_beach.jpg)center center no-repeat;
     background-size: cover;
-    height: calc(100vh - 145);
+    /* height: calc(100vh - 145); */
 }
 .book-now-container {
     padding: 35px 115px;
@@ -28,11 +28,34 @@
     margin: 10px;
 }
 
-@media all and (min-width: 768px) {
+.thailand {
+position: relative;
+width: 100%;
+text-align: center;
+transform: translate(-50%, 50%);
+}
+.thailand h3 {
+    -webkit-text-fill-color: transparent;
+    background: url(/assets/images/thailand_text_background.jpg)repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-stretch: normal;
+    font-size: 200px;
+    letter-spacing: 0.09em;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: Rubik, sans-serif;
+    top: 50%;
+    left: 50%;
+    position: relative;
+
+}
+
+/* @media all and (min-width: 768px) {
     .hero-container {
         height: 100vh;
     }    
-}
+} */
 
 @media all and (max-width: 599px) {
     .header-container .mat-display-1 {
