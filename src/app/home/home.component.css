@@ -50,7 +50,54 @@ transform: translate(-50%, 50%);
     position: relative;
 
 }
+.home-section {
+    text-align: center;
+    line-height: normal;
+}
+.rooms-home-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+.rooms-home-display mat-card {
+    position: relative;
+    text-align: center;
+    height: 600px;
+}
+.rooms-home-display mat-card button {
+    min-width: 141px;
+    min-height: 40px;
+}
+.rooms-home-display mat-card-header {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    height: 55px;
+    background: rgb(255, 248, 225, .5);
+}
+.rooms-home-display mat-card-header h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 43px;
 
+}
+.rooms-home-display mat-card-actions {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.rooms-suites {
+    background: url(/assets/images/beach-houses.jpg)center center no-repeat;
+}
+.beach-houses {
+    background: url(/assets/images/beach-houses.jpg)center center no-repeat;
+}
 /* @media all and (min-width: 768px) {
     .hero-container {
         height: 100vh;
@@ -65,5 +112,14 @@ transform: translate(-50%, 50%);
     .header-container .mat-display-4 {
         font-size: 3rem;
         line-height: 1.1;
+    }
+}
+@media all and (max-width: 1288px) {
+    .thailand,
+    .thailand h3 {
+        display: none;
+    }
+    .home-section {
+        padding-top: 80px;
     }
 }

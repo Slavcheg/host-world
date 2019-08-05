@@ -6,16 +6,17 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
     imports: [MatBadgeModule, MatButtonModule, MatToolbarModule,
         MatIconModule, MatSidenavModule, MatListModule,
-        MatTabsModule
+        MatTabsModule, MatCardModule
     ],
     exports: [MatBadgeModule, MatButtonModule, MatToolbarModule,
         MatIconModule, MatSidenavModule, MatListModule,
-        MatTabsModule
+        MatTabsModule, MatCardModule
     ]
 })
 
